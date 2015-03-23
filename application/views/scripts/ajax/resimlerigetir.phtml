@@ -1,0 +1,25 @@
+<link href="<?php echo $this->baseUrl; ?>assets/plugins/jquery-superbox/css/style.css" rel="stylesheet" type="text/css"
+      media="screen"/>
+<div class="superbox">
+    <?php
+    $indis = $this->indis;
+    $count = 0;
+    foreach ($veriler = $this->veriler->data as $veri):?>
+        <div class="superbox-list">
+            <span class="resimcount" id="resimcount" style="display: none;"><?php echo $indis[$count]; ?></span>
+            <img src="<?php echo $veri->images->low_resolution->url; ?>"
+                 data-img="<?php echo $veri->images->low_resolution->url; ?>" class="superbox-img">
+        </div>
+        <?php $count++; endforeach; ?>
+</div>
+
+<script src="<?php echo $this->baseUrl; ?>assets/plugins/jquery-superbox/js/superbox.js"
+        type="text/javascript"></script>
+<!-- END PAGE LEVEL PLUGINS -->
+<script>
+    $(function () {
+        // Call SuperBox - that's it!
+        $('.superbox').SuperBox();
+    });
+</script>
+		

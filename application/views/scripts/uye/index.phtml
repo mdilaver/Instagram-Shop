@@ -1,0 +1,58 @@
+<?php
+// Create an array with numbers 1 to 100
+$data = range(1, 100);
+
+// Get a Paginator object using Zend_Paginator's built-in factory.
+$paginator = Zend_Paginator::factory($data);
+
+// Select the second page
+$paginator->setCurrentPageNumber(1);
+
+?>
+<ul><?php
+
+    // Render each item for the current page in a list-item
+    foreach ($paginator as $item) {
+        echo '<li>' . $item . '</li>';
+    }
+
+    ?></ul><a href="<?php echo $this->url(array('page' => $this->first)); ?>">
+    First
+</a> |
+<?php if ($this->pageCount): ?>
+    <!-- First page link -->
+    <?php if (isset($this->previous)): ?>
+
+    <?php else: ?>
+        <span class="disabled">First</span> |
+    <?php endif; ?>
+
+    <!-- Previous page link -->
+
+       aaa <a href="<?php echo $this->url(array('page' => $this->previous)); ?>">
+            &lt; Previous
+        </a> |
+
+        <span class="disabled">&lt; Previous</span> |
+
+
+    <!-- Next page link -->
+    <?php if (isset($this->next)): ?>
+        <a href="<?php echo $this->url(array('page' => $this->next)); ?>">
+            Next &gt;
+        </a> |
+    <?php else: ?>
+        <span class="disabled">Next &gt;</span> |
+    <?php endif; ?>
+
+    <!-- Last page link -->
+    <?php if (isset($this->next)): ?>
+        <a href="<?php echo $this->url(array('page' => $this->last)); ?>">
+            Last
+        </a>
+    <?php else: ?>
+        <span class="disabled">Last</span>
+    <?php endif; ?>
+
+    </div>
+<?php endif; ?>

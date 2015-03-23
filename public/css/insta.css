@@ -1,0 +1,96 @@
+.white-bg {
+
+    margin: 0 auto;
+    margin-top: 50px;
+}
+/* Begin urunbox */
+.urunbox {
+    position: relative;
+    width: 221px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 5px 30px 4px;
+}
+.urunbox .boxgrid {
+    position: relative;
+    overflow: hidden;
+    background-color: #fff;
+    border-width: 8px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.1);
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    -webkit-border-top-right-radius: 8px;
+    -webkit-border-bottom-left-radius: 8px;
+    -moz-border-radius-topright: 8px;
+    -moz-border-radius-bottomleft: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+.urunbox .boxgrid:hover {
+    border-color: #dd7777;
+}
+.urunbox .image {
+    display: block;
+    overflow: hidden;
+    text-align: center;
+    line-height: 1px;
+}
+.urunbox .image img {
+    padding: 0;
+    max-width: 100%;
+    width: 100%;
+}
+.urunbox-info {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 31px;
+    margin-top: 5px;
+    border-top: 1px dotted #d1d1d1;
+}
+.urunbox .rating {
+    position: absolute;
+    bottom: 8px;
+    left: 5px;
+}
+.urunbox .boxgrid-bottom {
+    background: url(../assets/img/thumb-bottom-shadow.png) top center no-repeat;
+    text-align: center;
+    padding-top: 8px;
+}
+.urunbox .name {
+}
+.urunbox .name a {
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: normal;
+    color: #333;
+}
+.urunbox .price {
+    color: #333;
+    margin-top: 5px;
+}
+.urunbox .price-old {
+    color: #999;
+    text-decoration: line-through;
+}
+.urunbox .price-new {
+    color: #EB2B2B;
+}
+.ribbon-sale {
+    position: absolute;
+    background: url(../image/ribbon-sale.png) no-repeat;
+    width: 50px;
+    height: 50px;
+    top: -1px;
+    left: -1px;
+    z-index: 9;
+}
+/* End urunbox */

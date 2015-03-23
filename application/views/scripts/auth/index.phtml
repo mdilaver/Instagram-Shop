@@ -1,0 +1,23 @@
+<script src="/assets/plugins/jquery-1.8.3.min.js" type="text/javascript"></script>
+<a id="instagram" href="">Sign In with Instagram (SATICI)</a><br>
+<a id="facebook" href="">Sign In with Facebook (ALICI)</a>
+<script>
+    $(document).ready(function () {
+        $.ajax({
+            type: 'GET',
+            url: '/auth/facebooklink',
+            success: function (data) {
+                $('#facebook').attr("href", data.link);
+            }
+        });
+
+        $.ajax({
+            type: 'GET',
+            url: '/auth/instagramlink',
+            success: function (data) {
+                $('#instagram').attr("href", data.link);
+            }
+        });
+    });
+</script>
+

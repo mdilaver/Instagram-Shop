@@ -1,0 +1,32 @@
+<div class="col-md-6">
+    <button id="magazaolustur" type="button" class="btn btn-primary btn-block" style="height: 50px;"><i
+            class="fa fa-compass"></i>&nbsp;&nbsp;<span class="bold">Mağaza Oluştur</span></button>
+    <div class="magazaolusturcont"></div>
+</div>
+<div class="col-md-6">
+    <button id="magazaguncelle" type="button" class="btn btn-primary btn-block" style="height: 50px;"><i class="fa fa-pencil-square"></i>&nbsp;&nbsp;<span
+            class="bold">Mağaza Güncelle</span></button>
+    <div class="magazaguncellecont"></div>
+</div>
+<script>
+    $("#magazaolustur").click(function (e) {
+        $(".magazaolusturcont").html('<ul class="bokeh"><li></li><li></li><li></li><li></li></ul>');
+        $.ajax({
+            type: 'GET',
+            url: '/ajax/resimlerigetir',
+            success: function (data) {
+                $(".magazaolusturcont").html(data.html);
+            }
+        });
+    });
+    $("#magazaguncelle").click(function (e) {
+        $(".magazaguncelle").html('<ul class="bokeh"><li></li><li></li><li></li><li></li></ul>');
+        $.ajax({
+            type: 'GET',
+            url: '/ajax/magazaguncelle',
+            success: function (data) {
+                $(".magazaguncellecont").html(data.html);
+            }
+        });
+    });
+</script>

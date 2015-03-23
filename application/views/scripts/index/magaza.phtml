@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <?php $kullanici=$this->kullanici;?>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <title>InstaShop</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta content="" name="description"/>
+    <meta content="" name="author"/>
+    <link href="<?php echo $this->baseUrl; ?>assets/plugins/jquery-polymaps/style.css" rel="stylesheet" type="text/css"
+          media="screen"/>
+    <link href="<?php echo $this->baseUrl; ?>assets/plugins/jquery-metrojs/MetroJs.css" rel="stylesheet"
+          type="text/css"/>
+    <link rel="stylesheet" type="text/css" href="<?php echo $this->baseUrl; ?>assets/plugins/shape-hover/css/demo.css"/>
+    <link rel="stylesheet" type="text/css"
+          href="<?php echo $this->baseUrl; ?>assets/plugins/shape-hover/css/component.css"/>
+    <link rel="stylesheet" type="text/css"
+          href="<?php echo $this->baseUrl; ?>assets/plugins/owl-carousel/owl.carousel.css"/>
+    <link rel="stylesheet" type="text/css"
+          href="<?php echo $this->baseUrl; ?>assets/plugins/owl-carousel/owl.theme.css"/>
+    <link href="<?php echo $this->baseUrl; ?>assets/plugins/pace/pace-theme-flash.css" rel="stylesheet" type="text/css"
+          media="screen"/>
+    <link href="<?php echo $this->baseUrl; ?>assets/plugins/jquery-slider/css/jquery.sidr.light.css" rel="stylesheet"
+          type="text/css" media="screen"/>
+    <link rel="stylesheet" href="<?php echo $this->baseUrl; ?>assets/plugins/jquery-ricksaw-chart/css/rickshaw.css"
+          type="text/css" media="screen">
+    <link href="<?php echo $this->baseUrl; ?>assets/plugins/jquery-isotope/isotope.css" rel="stylesheet"
+          type="text/css"/>
+    <!-- BEGIN CORE CSS FRAMEWORK -->
+    <link href="<?php echo $this->baseUrl; ?>assets/plugins/boostrapv3/css/bootstrap.min.css" rel="stylesheet"
+          type="text/css"/>
+    <link href="<?php echo $this->baseUrl; ?>assets/plugins/boostrapv3/css/bootstrap-theme.min.css" rel="stylesheet"
+          type="text/css"/>
+    <link href="<?php echo $this->baseUrl; ?>assets/plugins/font-awesome/css/font-awesome.css" rel="stylesheet"
+          type="text/css"/>
+    <link href="<?php echo $this->baseUrl; ?>assets/css/animate.min.css" rel="stylesheet" type="text/css"/>
+    <!-- END CORE CSS FRAMEWORK -->
+
+    <!-- BEGIN CSS TEMPLATE -->
+    <link href="<?php echo $this->baseUrl; ?>assets/css/style.css" rel="stylesheet" type="text/css"/>
+    <link href="<?php echo $this->baseUrl; ?>assets/css/responsive.css" rel="stylesheet" type="text/css"/>
+    <link href="<?php echo $this->baseUrl; ?>assets/css/custom-icon-set.css" rel="stylesheet" type="text/css"/>
+    <link href="<?php echo $this->baseUrl; ?>assets/css/magic_space.css" rel="stylesheet" type="text/css"/>
+    <!-- END CSS TEMPLATE -->
+    <!-- BEGIN CORE JS FRAMEWORK-->
+
+    <!--[if lt IE 9]>
+    <script src="<?php echo $this->baseUrl;?>assets/plugins/respond.js"></script>
+    <![endif]-->
+
+    <script src="<?php echo $this->baseUrl; ?>assets/plugins/jquery-1.8.3.min.js" type="text/javascript"></script>
+    <script src="<?php echo $this->baseUrl; ?>assets/plugins/jquery-ui/jquery-ui-1.10.1.custom.min.js"
+            type="text/javascript"></script>
+    <script src="<?php echo $this->baseUrl; ?>assets/plugins/bootstrap/js/bootstrap.min.js"
+            type="text/javascript"></script>
+    <script src="<?php echo $this->baseUrl; ?>assets/plugins/breakpoints.js" type="text/javascript"></script>
+    <script src="<?php echo $this->baseUrl; ?>assets/plugins/jquery-unveil/jquery.unveil.min.js"
+            type="text/javascript"></script>
+    <script src="<?php echo $this->baseUrl; ?>assets/plugins/jquery-block-ui/jqueryblockui.js"
+            type="text/javascript"></script>
+    <script src="<?php echo $this->baseUrl; ?>assets/plugins/jquery-lazyload/jquery.lazyload.min.js"
+            type="text/javascript"></script>
+    <script src="<?php echo $this->baseUrl; ?>assets/plugins/jquery.cookie.js" type="text/javascript"></script>
+    <script src="<?php echo $this->baseUrl; ?>js/modernizr.custom.js" type="text/javascript"></script>
+    <!-- END CORE JS FRAMEWORK -->
+    <link href="<?php echo $this->baseUrl; ?>assets/plugins/jquery-superbox/css/style.css" rel="stylesheet"
+          type="text/css" media="screen"/>
+    <link href="<?php echo $this->baseUrl; ?>css/insta.css" rel="stylesheet" type="text/css"/>
+</head>
+<!-- END HEAD -->
+<div class="container">
+    <div class="white-bg">
+        <div class="row">
+            <?php foreach ($this->urunler as $urun): ?>
+                <div class="urunbox">
+                    <!-- Begin UrunBox -->
+                    <div style="opacity: 1;" class="boxgrid">
+                        <div class="image"><a href="/satinal/<?php echo $kullanici['kullanici_adi']; ?>/<?php echo $urun['urun_uri']; ?>"><img style="opacity: 1;" src="<?php echo $urun['urun_resim']; ?>"
+                                                            alt="iPod Classic"></a></div>
+                        <!-- Begin box-product-info -->
+                        <div class="box-product-info">
+                            <div class="more"><a title="" oldtitle="View More" href=""></a></div>
+                            <div class="glyphicon glyphicon-plus"><input title="" oldtitle="Add to Cart"
+                                                                         value="Add to Cart" onclick="addToCart('48');"
+                                                                         class="button-cart" type="button"></div>
+                            <div class="wishlist"><a title="" oldtitle="Add to Wish List"
+                                                     onclick="addToWishList('48');"></a></div>
+                            <div class="compare"><a title="" oldtitle="Add to Compare"
+                                                    onclick="addToCompare('48');"></a></div>
+                        </div>
+                        <!-- End box-product-info -->
+                    </div>
+                    <!-- End boxgrid -->
+                    <!-- Begin boxgrid-bottom -->
+                    <div class="boxgrid-bottom">
+                        <div class="name"><a href="/satinal/<?php echo $kullanici['kullanici_adi']; ?>/<?php echo $urun['urun_uri']; ?>"><?php echo $urun['urun_adi']; ?></a></div>
+                        <div class="price"><?php echo $urun['urun_fiyati']; ?></div>
+                    </div>
+                    <!-- End boxgrid-bottom -->
+
+                </div>
+            <?php endforeach; ?>
+        </div>
+    </div>
+</div>
+
+
+
+

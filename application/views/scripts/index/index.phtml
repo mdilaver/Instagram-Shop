@@ -1,0 +1,19 @@
+
+
+<div class="row">
+    <?php foreach ($this->magazalar as $magaza): ?>
+
+        <div class="col-sm-2 col-md-2">
+            <div class="thumbnail">
+                <img src="<?php echo $magaza['resim_link']; ?>" alt="...">
+
+                <div class="caption">
+                    <h3><?php echo $magaza['magaza_adi']; ?></h3>
+
+                    <p><a href="/<?php echo $magaza['kullanici_adi'] ?>" class="btn btn-primary btn-lg btn-block"
+                          role="button">Mağazaya Git</a></p>
+                </div>
+            </div>
+        </div>
+
+    <?php endforeach; ?></div>

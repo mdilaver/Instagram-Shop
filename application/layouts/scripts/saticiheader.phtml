@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <title>InstaShop</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta content="" name="description"/>
+    <meta content="" name="author"/>
+    <link href="<?php echo $this->baseUrl; ?>assets/plugins/jquery-polymaps/style.css" rel="stylesheet" type="text/css"
+          media="screen"/>
+    <link href="<?php echo $this->baseUrl; ?>assets/plugins/jquery-metrojs/MetroJs.css" rel="stylesheet"
+          type="text/css"/>
+    <link rel="stylesheet" type="text/css" href="<?php echo $this->baseUrl; ?>assets/plugins/shape-hover/css/demo.css"/>
+    <link rel="stylesheet" type="text/css"
+          href="<?php echo $this->baseUrl; ?>assets/plugins/shape-hover/css/component.css"/>
+    <link rel="stylesheet" type="text/css"
+          href="<?php echo $this->baseUrl; ?>assets/plugins/owl-carousel/owl.carousel.css"/>
+    <link rel="stylesheet" type="text/css"
+          href="<?php echo $this->baseUrl; ?>assets/plugins/owl-carousel/owl.theme.css"/>
+    <link href="<?php echo $this->baseUrl; ?>assets/plugins/pace/pace-theme-flash.css" rel="stylesheet" type="text/css"
+          media="screen"/>
+    <link href="<?php echo $this->baseUrl; ?>assets/plugins/jquery-slider/css/jquery.sidr.light.css" rel="stylesheet"
+          type="text/css" media="screen"/>
+    <link rel="stylesheet" href="<?php echo $this->baseUrl; ?>assets/plugins/jquery-ricksaw-chart/css/rickshaw.css"
+          type="text/css" media="screen">
+    <link href="<?php echo $this->baseUrl; ?>assets/plugins/jquery-isotope/isotope.css" rel="stylesheet"
+          type="text/css"/>
+    <!-- BEGIN CORE CSS FRAMEWORK -->
+    <link href="<?php echo $this->baseUrl; ?>assets/plugins/boostrapv3/css/bootstrap.min.css" rel="stylesheet"
+          type="text/css"/>
+    <link href="<?php echo $this->baseUrl; ?>assets/plugins/boostrapv3/css/bootstrap-theme.min.css" rel="stylesheet"
+          type="text/css"/>
+    <link href="<?php echo $this->baseUrl; ?>assets/plugins/font-awesome/css/font-awesome.css" rel="stylesheet"
+          type="text/css"/>
+    <link href="<?php echo $this->baseUrl; ?>assets/css/animate.min.css" rel="stylesheet" type="text/css"/>
+    <!-- END CORE CSS FRAMEWORK -->
+
+    <!-- BEGIN CSS TEMPLATE -->
+    <link href="<?php echo $this->baseUrl; ?>assets/css/style.css" rel="stylesheet" type="text/css"/>
+    <link href="<?php echo $this->baseUrl; ?>assets/css/responsive.css" rel="stylesheet" type="text/css"/>
+    <link href="<?php echo $this->baseUrl; ?>assets/css/custom-icon-set.css" rel="stylesheet" type="text/css"/>
+    <link href="<?php echo $this->baseUrl; ?>assets/css/magic_space.css" rel="stylesheet" type="text/css"/>
+    <!-- END CSS TEMPLATE -->
+    <!-- BEGIN CORE JS FRAMEWORK-->
+
+    <!--[if lt IE 9]>
+    <script src="<?php echo $this->baseUrl;?>assets/plugins/respond.js"></script>
+    <![endif]-->
+
+    <script src="<?php echo $this->baseUrl; ?>assets/plugins/jquery-1.8.3.min.js" type="text/javascript"></script>
+    <script src="<?php echo $this->baseUrl; ?>assets/plugins/jquery-ui/jquery-ui-1.10.1.custom.min.js"
+            type="text/javascript"></script>
+    <script src="<?php echo $this->baseUrl; ?>assets/plugins/bootstrap/js/bootstrap.min.js"
+            type="text/javascript"></script>
+    <script src="<?php echo $this->baseUrl; ?>assets/plugins/breakpoints.js" type="text/javascript"></script>
+    <script src="<?php echo $this->baseUrl; ?>assets/plugins/jquery-unveil/jquery.unveil.min.js"
+            type="text/javascript"></script>
+    <script src="<?php echo $this->baseUrl; ?>assets/plugins/jquery-block-ui/jqueryblockui.js"
+            type="text/javascript"></script>
+    <script src="<?php echo $this->baseUrl; ?>assets/plugins/jquery-lazyload/jquery.lazyload.min.js"
+            type="text/javascript"></script>
+    <script src="<?php echo $this->baseUrl; ?>assets/plugins/jquery.cookie.js" type="text/javascript"></script>
+    <script src="<?php echo $this->baseUrl; ?>js/modernizr.custom.js" type="text/javascript"></script>
+
+    <!-- END CORE JS FRAMEWORK -->
+</head>
+<!-- END HEAD -->
+<?php if ($this->bilgi_mesaji): ?>
+    <div class="bilgimesaji alert alert-info fade in" role="alert">
+        <button type="button" class="close" data-dismiss="alert"><span class="sr-only">Close</span></button>
+        <strong><?php echo $this->bilgi_mesaji; ?></strong>
+    </div>
+<?php endif; ?>
+<?php if ($this->hata_mesaji): ?>
+    <div class="bilgimesaji alert alert-danger fade in" role="alert">
+        <button type="button" class="close" data-dismiss="alert"><span class="sr-only">Close</span></button>
+        <strong><?php echo $this->hata_mesaji; ?></strong>
+    </div>
+<?php endif; ?>

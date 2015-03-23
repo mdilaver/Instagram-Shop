@@ -1,0 +1,7 @@
+<script src="<?php echo $this->baseUrl; ?>assets/plugins/jquery-1.8.3.min.js" type="text/javascript"></script>
+<script>
+    $(document).ready(function () {
+        if (window.location.href.indexOf('#_=_') > 0) {
+            window.location = window.location.href.replace(/#.*/, '');
+        }});
+</script>

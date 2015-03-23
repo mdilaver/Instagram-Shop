@@ -1,0 +1,11 @@
+// if the code parameter has been sent, we retrieve the access_token echo $pics['data'][0]['images']['standard_resolution']['url'];
+<?php $veriler = $this->veriler;
+$count = 0; ?>
+<?php foreach ($veriler as $user): $count = $count + 1; ?>
+    <div class="col-md-2"><a href="http://www.instagram.com/">
+            <center>
+                <img src="<?php echo $user->images->standard_resolution->url; ?>" alt="" width="150px"/><br>
+            </center>
+        </a>
+    </div>
+<?php endforeach; ?>
