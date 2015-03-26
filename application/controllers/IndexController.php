@@ -29,7 +29,7 @@ class IndexController extends Zend_Controller_Action
         $this->view->urunler = $data;
     }
 
-    public function omerAction(){
+    public function twitterAction(){
 
         echo 1;exit;
     }
