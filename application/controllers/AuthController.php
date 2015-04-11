@@ -118,7 +118,6 @@ class AuthController extends Zend_Controller_Action
             $response = $client2->request('GET');
             Zend_Debug::dump($response);
             $sonuc = json_decode($response->getBody());
-            Zend_Debug::dump($sonuc);exit;
             $date = Zend_Date::now();
             $data = array(
                 'alici_id' => $sonuc->id,
